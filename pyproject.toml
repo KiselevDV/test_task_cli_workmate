@@ -1,0 +1,22 @@
+[project]
+name = "log-analyzer"
+version = "0.1.0"
+description = "CLI-приложение для анализа логов Django"
+authors = [{name = "Dmitry", email = "kiselevdv1991@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = []
+
+[project.scripts]
+log-analyzer = "log_analyzer.main:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.1.1"]
+
+[tool.poetry]
+packages = [{ include = "log_analyzer", from = "src" }]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
